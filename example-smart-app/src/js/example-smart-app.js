@@ -72,8 +72,8 @@
         
         $.when(pt, enc).fail(onError);
         $.when(pt, enc).done(function(patient, enc) {
-       console.log(enc.length);
-      $('#encounter').append("<tr><td>" + enc[0].id + "</td><td> " + enc[0].class + "</td></tr>");
+       for(var i=0 ; i < enc.length; i++)
+      $('#encounter').append("<tr><td>" + enc[i].id + "</td><td> " + enc[i].class + "</td></tr>");
        
     });
       } else {
