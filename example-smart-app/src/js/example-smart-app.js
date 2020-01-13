@@ -68,16 +68,21 @@
           p.ldl = getQuantityValueAndUnit(ldl[0]);
 
           ret.resolve(p);
+          
+          
         });
+        
+        $.when(pt, enc).fail(onError);
+        $.when(pt, enc).done(function(patient, enc) {
+             
+      console.log(enc.entry[0].resource.id);
+    });
       } else {
         onError();
       }
     }
-    $.when(pt, enc).fail(onError);
-    $.when(pt, enc).done(function(patient, enc) {
-      
-      console.log(enc.entry[0].resource.id);
-    });
+    
+    
     
     
 
