@@ -24,7 +24,7 @@
         var enc = smart.patient.api.fetchAll({
                     type: 'Encounter',
                     query: {
-                      _id: patient.id;
+                       _id: '4027918'
                     }
         });
         console.log(enc);
