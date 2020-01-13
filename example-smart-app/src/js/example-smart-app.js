@@ -72,9 +72,9 @@
         
         $.when(pt, enc).fail(onError);
         $.when(pt, enc).done(function(patient, enc) {
-       enc.foreach( encounter => {
-      $('#encounter').append("<tr><td>" + encounter.id + "</td><td> " + encounter.class + "</td></tr>");
-       } );
+       console.log(enc.length);
+      $('#encounter').append("<tr><td>" + enc[0].id + "</td><td> " + enc[0].class + "</td></tr>");
+       
     });
       } else {
         onError();
