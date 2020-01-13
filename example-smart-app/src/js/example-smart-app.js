@@ -24,7 +24,6 @@
         var enc = smart.patient.api.fetchAll({
                     type: 'Encounter',
                     query: {
-                       _id: '4027918'
                     }
         });
         console.log(enc);
@@ -76,7 +75,7 @@
     $.when(pt, enc).fail(onError);
     $.when(pt, enc).done(function(patient, enc) {
       
-      console.log(enc);
+      console.log(enc.entry[0].resource.id);
     });
     
     
