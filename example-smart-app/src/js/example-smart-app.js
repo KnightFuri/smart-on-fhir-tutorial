@@ -26,7 +26,7 @@
                     query: {
                     }
         });
-        console.log(enc);
+        console.log(enc.entry);
 
         $.when(pt, obv).fail(onError);
 
@@ -74,7 +74,7 @@
         $.when(pt, enc).fail(onError);
         $.when(pt, enc).done(function(patient, enc) {
              
-      console.log(enc.entry[0].resource.id);
+      console.log(enc);
     });
       } else {
         onError();
